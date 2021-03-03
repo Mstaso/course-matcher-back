@@ -40,7 +40,7 @@ b6 = Business.create(name: "SmartRent", industry:"Tech", job:"Our company is see
 # "https://api.coursera.org/api/courses.v1?includes=instructorIds,partnerIds,photoUrl,description,domainTypes&fields=instructorIds,partnerIds,photoUrl,description,domainTypes&&limit=100"
 
 def courses
-    response = RestClient.get"https://api.coursera.org/api/courses.v1?includes=photoUrl,workload,specializations,description,domainTypes&fields=photoUrl,workload,specializations,description,domainTypes&&limit=1000"
+    response = RestClient.get"https://api.coursera.org/api/courses.v1?includes=photoUrl,workload,specializations,description,domainTypes&fields=photoUrl,workload,specializations,description,domainTypes&&limit=100"
     json = JSON.parse response
 
     if !json.nil?
